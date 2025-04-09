@@ -1,13 +1,17 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Outfit";
+  src: url(../fonts/Outfit-Regular.woff2);
   font-weight: 400;
-  src: url(../fonts/Outfit-Regular.ttf);
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Outfit";
+  src: url(../fonts/Outfit-Bold.woff2);
   font-weight: 700;
-  src: url(../fonts/Outfit-Bold.ttf);
+  font-style: normal;
+  font-display: swap;
 }
 /**
   Нормализация блочной модели
@@ -204,7 +208,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   background-color: var(--color-slate-300);
 }
@@ -243,17 +246,24 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 24px;
   width: 320px;
   padding: 16px 16px 40px 16px;
   border-radius: 20px;
   text-align: center;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.05));
 }
 .qr-wrapper img {
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .text-wrapper {
+  display: flex;
+  flex-direction: column;
   padding-inline: 16px;
+  row-gap: 16px;
 }
 
 .footer {

@@ -2,7 +2,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   font-family: "Outfit", Arial, Helvetica, sans-serif;
   background-color: var(--color-slate-300);
 }
@@ -41,18 +40,24 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  row-gap: 24px;
   width: 320px;
   padding: 16px 16px 40px 16px;
   border-radius: 20px;
   text-align: center;
+  filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.05));
 
   img {
     border-radius: 10px;
+    object-fit: cover;
   }
 }
 
 .text-wrapper {
+  display: flex;
+  flex-direction: column;
   padding-inline: 16px;
+  row-gap: 16px;
 }
 
 .footer {
